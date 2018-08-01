@@ -1,0 +1,9 @@
+<div>
+<h2>Signup</h2>
+<label for="email">Email</label>
+<input [(ngModel)]="email" type="email" name="email">
+<br>
+<label for="password"> Password</label>
+<input type="password" name="password" [(ngModel)]="password">
+<input type="submit" value="Signup" (click)="handleSignup()">
+</div>
