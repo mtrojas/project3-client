@@ -1,0 +1,28 @@
+.container {
+  display: grid;
+  width: 60%;
+  height: 700px;
+  grid-template-rows: 1fr  3fr 2fr;
+  justify-content: center;
+  align-items: center;
+  color: var(--gray);
+}
+.item {
+  text-align: center;
+}
+
+img {
+  border-radius: 50%;
+  height: 200px;
+}
+
+p {
+  line-height: 2;
+  font-size: 14px;
+  text-align: left;
+}
+
+h1 {
+  text-align: left;
+}
+
