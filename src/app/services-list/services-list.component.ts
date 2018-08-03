@@ -12,6 +12,7 @@ import { ServicesApiService } from '../services/services-api.service';
 export class ServicesListComponent implements OnInit {
 
   services: Array<any>
+  user = JSON.parse(localStorage.getItem('user'))
 
   constructor(
     private servicesApiService: ServicesApiService,
@@ -19,16 +20,16 @@ export class ServicesListComponent implements OnInit {
   ) { }
 
   ngOnInit() {
-    this.servicesApiService.getAllServices().toPromise()
-    .then(services => {
-      this.services = services;
-    })
+    this.servicesApiService.getAllServices()
+      .then(services => {
+        this.services = services;
+      })
 
-      // //saco al user del localstorage
-      // const user = JSON.parse(localStorage.getItem('user'))
-      // if(user.role !== "ADMIN"){
-      //   this.router.navigate(['/'])
-      // }
+      //saco al user del localstorage
+
+      //  if(user.role !== "ADMIN"){
+      //    this.router.navigate(['/'])
+      //  }
   }
 
 }

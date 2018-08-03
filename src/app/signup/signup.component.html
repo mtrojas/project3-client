@@ -1,9 +1,33 @@
-<div>
-<h2>Signup</h2>
-<label for="email">Email</label>
-<input [(ngModel)]="email" type="email" name="email">
-<br>
-<label for="password"> Password</label>
-<input type="password" name="password" [(ngModel)]="password">
-<input type="submit" value="Signup" (click)="handleSignup()">
+<div *ngIf="hasAccount" class="container">
+	<div class="item">
+		<input placeholder="email" [(ngModel)]="auth.email" type="email" required>
+	</div>
+	<div class="item">
+		<input placeholder="contraseña" [(ngModel)]="auth.password"  type="password" required>
+	</div>
+	<div class="item">
+		<button type="button" class="btn btn-secondary btn-lg" (click)="handleLogin()">Entrar</button>
+		<p>Si no tienes cuenta...haz<span (click)="hasAccount=!hasAccount"> click aquí</span></p>
+	</div>
 </div>
+
+<div *ngIf="!hasAccount" class="container">
+	<div class="item">
+		<h3>Crea tu cuenta</h3>
+		<input type="email" name="email" placeholder="email" [(ngModel)]="email" required>
+	</div>
+	<div class="item">
+		<input #myPassword="ngModel" type="password" name="password" placeholder="contraseña" [(ngModel)]="password" required>
+	</div>
+	<div class="item">
+		<button type="button" class="btn btn-secondary btn-lg" (click)="handleSignup()">Crear cuenta y entrar</button>
+		<p>Volver a<span (click)="hasAccount=!hasAccount"> login</span></p>
+	</div>
+</div>
+
+
+
+
+
+
+

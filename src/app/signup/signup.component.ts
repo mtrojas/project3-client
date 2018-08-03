@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 import { AuthService } from '../services/auth.service'
+
 
 
 @Component({
@@ -9,6 +11,7 @@ import { AuthService } from '../services/auth.service'
   styleUrls: ['./signup.component.css']
 })
 export class SignupComponent implements OnInit {
+  hasAccount: boolean = true
   email: string  = ''
   password: string = ''
   auth  = {
@@ -17,7 +20,10 @@ export class SignupComponent implements OnInit {
   }
   user: string = ''
 
-  constructor(private authService: AuthService) { }
+  constructor(
+    private authService: AuthService,
+    private router: Router,
+  ) { }
 
   handleSignup() {
     console.log(this.auth)
@@ -26,22 +32,26 @@ export class SignupComponent implements OnInit {
     this.authService.signupService(this.auth)
     .subscribe(user => {
       this.user = user
+      this.router.navigate(['']);
     })
     this.email = ''
     this.password = ''
   }
-//added not tested, change to its own component or make a single component like beth'splease try again the signup too, weird thing that logs the last user signed up in the console and in the body comes new one????
+
   handleLogin() {
     this.authService.loginService(this.auth)
     .subscribe(user => {
       this.user = user
+      console.log(user)
       localStorage.setItem('user', JSON.stringify(user))
+      this.router.navigate(['']);
     })
     this.email = ''
     this.password = ''
   }
 
   ngOnInit() {
+    console.log(this.router);
   }
-
 }
+

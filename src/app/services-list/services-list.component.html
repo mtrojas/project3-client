@@ -1,3 +1,11 @@
-<p>
-  services-list works!
-</p>
+<div class="grid">
+<h1 class="item">NUESTROS SERVICIOS</h1>
+</div>
+<div class="container">
+  <div *ngFor="let service of services" class="item">
+    <img src="{{service.images[0]}}" alt="Imágenes del servicio">
+    <p>{{service.name}}</p>
+    <button><a [routerLink]="['/service', service._id]">View details</a></button>
+  </div>
+</div>
+

@@ -9,12 +9,14 @@ import { map } from 'rxjs/operators';
 })
 export class ServicesApiService {
    //url = '/services/'
-  url = 'http://localhost:3000/api/phones/'
+  url = 'http://localhost:3000/services/'
+
   constructor(private http: Http) { }
 
   getAllServices() {
-    return this.http.get(this.url)
-    .pipe(map((res: Response) => res.json()))
+    return this.http.get(this.url).toPromise()
+    .then((res: Response)=> res.json())
+    .catch(e=>console.log(e))
   }
 
   createService(service) {

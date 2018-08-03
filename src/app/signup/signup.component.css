@@ -1,0 +1,33 @@
+.container {
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  grid-template-rows: 1fr 1fr 1fr;
+  grid-template-columns: 1fr;
+  width: 30%;
+  height: 400px;
+}
+
+input {
+  border: none;
+  border-bottom: 2px solid var(--pink);
+  font-size: 22px;
+  padding: 20px 20px 10px 0px;
+  font-family:  "Nunito", sans-serif;
+  color: var(--gray);
+}
+
+input:focus {
+  outline: none;
+}
+
+p {
+  padding-top: 10px;
+}
+
+span:hover {
+  color: var(--pink);
+  font-weight: bold;
+  cursor: pointer;
+}
+
