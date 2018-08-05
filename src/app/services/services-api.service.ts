@@ -8,8 +8,9 @@ import { map } from 'rxjs/operators';
   providedIn: 'root'
 })
 export class ServicesApiService {
-   //url = '/services/'
-  url = 'http://localhost:3000/services/'
+
+  url = '/services/'
+  //url = 'http://localhost:3000/services/'
 
   constructor(private http: Http) { }
 

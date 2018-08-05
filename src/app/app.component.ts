@@ -9,8 +9,8 @@ import { AuthService } from './services/auth.service';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'app';
-  user = JSON.parse(localStorage.getItem('user'))
+
+  user: any;
 
   constructor(
     private authService: AuthService,
@@ -22,5 +22,8 @@ export class AppComponent {
     window.location.reload()
   }
 
+  ngOnInit() {
+    this.user =  JSON.parse(localStorage.getItem('user'))
+  }
 
 }

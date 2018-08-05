@@ -12,6 +12,7 @@ export class ServiceDetailComponent implements OnInit {
 
   id: any
   service: any = {}
+  user: any;
 
   constructor(
     private servicesApiService: ServicesApiService,
@@ -29,6 +30,7 @@ export class ServiceDetailComponent implements OnInit {
             this.service = service
           })
     })
+    this.user =  JSON.parse(localStorage.getItem('user'))
   }
 
 }

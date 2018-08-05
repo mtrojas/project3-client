@@ -1,12 +1,11 @@
 <div class="grid">
-<h1 class="item">NUESTROS SERVICIOS</h1>
+  <h1>NUESTROS SERVICIOS</h1>
 </div>
 <div class="container">
   <div *ngFor="let service of services" class="item">
     <img src="{{service.images[0]}}" alt="Imágenes del servicio">
     <p>{{service.name}}</p>
     <button type="button" class="btn btn-secondary btn-lg" [routerLink]="['/service', service._id]">Ver más</button>
-    <!-- <button><a >View details</a></button> -->
   </div>
 </div>
 

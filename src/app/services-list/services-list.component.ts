@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import {Router} from '@angular/router'
+//import {Router} from '@angular/router'
 
 import { ServicesApiService } from '../services/services-api.service';
 
@@ -12,11 +12,11 @@ import { ServicesApiService } from '../services/services-api.service';
 export class ServicesListComponent implements OnInit {
 
   services: Array<any>
-  user = JSON.parse(localStorage.getItem('user'))
+  user: any;
 
   constructor(
     private servicesApiService: ServicesApiService,
-    private router: Router
+    //private router: Router
   ) { }
 
   ngOnInit() {
@@ -24,12 +24,7 @@ export class ServicesListComponent implements OnInit {
       .then(services => {
         this.services = services;
       })
-
-      //saco al user del localstorage
-
-      //  if(user.role !== "ADMIN"){
-      //    this.router.navigate(['/'])
-      //  }
+    this.user =  JSON.parse(localStorage.getItem('user'))
   }
 
 }

@@ -3,8 +3,6 @@ import { Router } from '@angular/router';
 
 import { AuthService } from '../services/auth.service'
 
-
-
 @Component({
   selector: 'app-signup',
   templateUrl: './signup.component.html',
@@ -18,7 +16,7 @@ export class SignupComponent implements OnInit {
     email: '',
     password: ''
   }
-  user: string = ''
+  user: any
 
   constructor(
     private authService: AuthService,
@@ -26,7 +24,6 @@ export class SignupComponent implements OnInit {
   ) { }
 
   handleSignup() {
-    console.log(this.auth)
     this.auth.email = this.email
     this.auth.password = this.password
     this.authService.signupService(this.auth)
@@ -53,5 +50,6 @@ export class SignupComponent implements OnInit {
   ngOnInit() {
     console.log(this.router);
   }
+
 }
 
