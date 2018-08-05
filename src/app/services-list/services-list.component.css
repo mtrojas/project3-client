@@ -5,7 +5,7 @@
   text-align: left;
 }
 h1.item {
-  margin: 40px 0px 40px 210px;
+  margin: 40px 0px 40px 50px;
 }
 
 .container {
@@ -22,7 +22,7 @@ h1.item {
 }
 
 .item {
-  /* text-align: center; */
+  text-align: center;
 }
 
 img {
@@ -32,9 +32,8 @@ img {
 }
 
 p {
-  margin-left: 50px;
-  padding: 20px 30px 0px 10px;
+  padding-top: 20px;
+  /* padding: 20px 30px 0px 10px; */
   line-height: 2;
   font-size: 12px;
-  text-align: left;
 }

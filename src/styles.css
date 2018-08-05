@@ -30,7 +30,7 @@ body {
   margin-top: 20px;
   margin-left: 60px;
   margin-right: 60px;
-  margin-bottom: 60px;
+  /* margin-bottom: 60px; */
   background: white;
   background-attachment: fixed;
   letter-spacing: 1px;

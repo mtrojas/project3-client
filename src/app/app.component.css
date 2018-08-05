@@ -39,3 +39,21 @@ a {
 a:hover {
   border-bottom: 3px solid var(--pink);
 }
+
+.grid3 {
+  display: grid;
+  height: 80px;
+  width: 100%;
+  grid-template-columns: 60px 60px 60px;;
+  justify-items: center;
+  align-items: center;
+  grid-auto-flow: column;
+  justify-content: center;
+  margin-top: 80px;
+
+}
+
+i {
+  font-size: 35px;
+  color: var(--pink);
+}
