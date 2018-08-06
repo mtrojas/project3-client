@@ -9,8 +9,8 @@ import { map } from 'rxjs/operators';
 })
 export class AuthService {
 
-  url = '/'
-  //url = 'http://localhost:3000/'
+  //url = '/'
+  url = 'http://localhost:3000/'
 
   constructor(private http: Http) { }
 

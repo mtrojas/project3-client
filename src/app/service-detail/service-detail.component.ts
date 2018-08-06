@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
+import { Location } from '@angular/common';
 
 import { ServicesApiService } from '../services/services-api.service';
 
@@ -17,8 +18,13 @@ export class ServiceDetailComponent implements OnInit {
   constructor(
     private servicesApiService: ServicesApiService,
     private activatedRoute: ActivatedRoute,
-    private router: Router
+    private router: Router,
+    private location: Location
   ) { }
+
+  goBack(): void {
+    this.location.back();
+  }
 
   ngOnInit() {
     this.activatedRoute.params
@@ -31,6 +37,7 @@ export class ServiceDetailComponent implements OnInit {
           })
     })
     this.user =  JSON.parse(localStorage.getItem('user'))
+
   }
 
 }

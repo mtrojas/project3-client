@@ -11,6 +11,10 @@ img {
   border-radius: 3%;
 }
 
+small {
+  font-weight: 100;
+}
+
 .text {
   grid-area: text;
   display: grid;

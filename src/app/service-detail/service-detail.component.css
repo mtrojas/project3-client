@@ -18,3 +18,8 @@
 .image {
   width: 100%;
 }
+
+a:hover {
+  cursor: pointer;
+  margin: 10px;
+}

@@ -7,15 +7,10 @@
   align-items: center;
   color: var(--gray);
 }
+
 .item {
   margin-top: 30px;
   text-align: center;
-}
-
-img {
-  margin: 30px 0 40px 0;
-  border-radius: 5%;
-  height: 200px;
 }
 
 p {
@@ -29,4 +24,35 @@ h1 {
   text-align: left;
   font-weight: 700;
 }
+
+.image {
+  margin-top: 30px;
+  text-align: center;
+  margin: 30px 0 40px 0;
+  display: grid;
+  grid-template-rows: 2fr 1fr;
+  justify-items: center;
+}
+
+small {
+  font-weight: 100;
+}
+
+img {
+  border-radius: 5%;
+  height: 200px;
+}
+
+.redirection-buttons {
+ margin: 40px;
+}
+#services-redirection {
+  margin-left: 500px;
+}
+
+
+
+
+
+
 

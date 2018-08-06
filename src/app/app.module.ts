@@ -7,6 +7,7 @@ import { HttpModule } from '@angular/http';
 
 import { AuthService } from './services/auth.service';
 import { ServicesApiService } from './services/services-api.service';
+import { BlogService } from './services/blog.service';
 
 import { routes } from './routes';
 
@@ -34,7 +35,7 @@ import { HomeComponent } from './home/home.component';
     RouterModule.forRoot(routes),
     NgbModule.forRoot()
   ],
-  providers: [AuthService, ServicesApiService],
+  providers: [AuthService, ServicesApiService, BlogService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
