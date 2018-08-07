@@ -29,6 +29,7 @@ export class SignupComponent implements OnInit {
     this.authService.signupService(this.auth)
     .subscribe(user => {
       this.user = user
+      localStorage.setItem('user', JSON.stringify(user))
       window.location.reload() //added
       this.router.navigate(['']);
     })

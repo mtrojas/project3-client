@@ -18,7 +18,8 @@ export class BlogComponent implements OnInit {
       .then(posts => {
         this.posts = posts;
       })
-
   }
+
+
 
 }

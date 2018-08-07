@@ -1,3 +1,21 @@
-<p>
-  blog-detail works!
-</p>
+<div class="container">
+  <div class="title">
+    <h1>{{post.title}}</h1>
+  </div>
+  <div class="date">
+    <p>{{post.created_at | date:'longDate' }}</p>
+  </div>
+  <div class="text">
+    <p>{{post.text}}</p>
+  </div>
+  <div class="image">
+    <img src="{{post.image.url}}" alt="Imagen del post">
+    <small>{{post.image.author}}</small>
+  </div>
+  <div class="go-back">
+      <a (click)="goBack()"> volver atrás</a>
+  </div>
+  <!-- <div class="comments">
+
+  </div> -->
+</div>

@@ -25,11 +25,11 @@
     </div>
     <div class="item">
     </div>
-    <div class="item" *ngIf="user">
+    <div class="item" *ngIf="isLoggedIn">
       <a (click)="handleLogout()">salir</a>
     </div>
-    <div class="item" *ngIf="!user">
-        <a [routerLink]="['signup']">tu cuenta</a>
+    <div class="item" *ngIf="!isLoggedIn">
+     <a [routerLink]="['/signup']">tu cuenta</a>
     </div>
   </nav>
 
