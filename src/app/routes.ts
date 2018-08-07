@@ -5,6 +5,8 @@ import { SignupComponent } from './signup/signup.component';
 import { AboutComponent } from './about/about.component';
 import { ServicesListComponent } from './services-list/services-list.component';
 import { ServiceDetailComponent } from './service-detail/service-detail.component';
+import { BlogComponent } from './blog/blog.component';
+import { BlogDetailComponent } from './blog-detail/blog-detail.component';
 
 export const routes: Routes = [
   { path: '', component: HomeComponent },
@@ -18,5 +20,7 @@ export const routes: Routes = [
     //   component: EditServiceComponent
     // ]
   },
+  { path: 'blog', component: BlogComponent },
+  { path: 'blog/:id', component: BlogDetailComponent },
   { path: '**', redirectTo: '' }
 ];

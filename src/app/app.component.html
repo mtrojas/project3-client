@@ -21,13 +21,16 @@
       <a [routerLink]="['services']">SERVICIOS</a>
     </div>
     <div class="item">
+        <a [routerLink]="['blog']">BLOG</a>
+    </div>
+    <div class="item">
     </div>
     <div class="item" *ngIf="user">
       <a (click)="handleLogout()">salir</a>
     </div>
     <div class="item" *ngIf="!user">
         <a [routerLink]="['signup']">tu cuenta</a>
-      </div>
+    </div>
   </nav>
 
   <router-outlet></router-outlet>

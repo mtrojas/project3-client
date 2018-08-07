@@ -17,6 +17,8 @@ import { AboutComponent } from './about/about.component';
 import { ServicesListComponent } from './services-list/services-list.component';
 import { ServiceDetailComponent } from './service-detail/service-detail.component';
 import { HomeComponent } from './home/home.component';
+import { BlogComponent } from './blog/blog.component';
+import { BlogDetailComponent } from './blog-detail/blog-detail.component';
 
 
 @NgModule({
@@ -27,6 +29,8 @@ import { HomeComponent } from './home/home.component';
     ServicesListComponent,
     ServiceDetailComponent,
     HomeComponent,
+    BlogComponent,
+    BlogDetailComponent,
   ],
   imports: [
     BrowserModule,
