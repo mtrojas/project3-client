@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-//import {Router} from '@angular/router'
+import {Router} from '@angular/router'
 
 import { ServicesApiService } from '../services/services-api.service';
 
@@ -14,10 +14,26 @@ export class ServicesListComponent implements OnInit {
   services: Array<any>
   user: any;
 
+  service: any = { }
+
   constructor(
     private servicesApiService: ServicesApiService,
-    //private router: Router
+    private router: Router
   ) { }
+
+  handleCreateService() {
+    const form = new FormData()
+    for(let k in this.service){
+      form.append(k, this.service[k])
+    }
+    console.log(this.service)
+
+    this.servicesApiService.createService(this.service)
+    .subscribe(service => {
+      this.router.navigate(['services'])
+    })
+  }
+
 
   ngOnInit() {
     this.servicesApiService.getAllServices()

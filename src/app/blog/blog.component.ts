@@ -10,6 +10,7 @@ import { BlogService } from '../services/blog.service';
 export class BlogComponent implements OnInit {
 
   posts: Array<any>
+  user: any
 
   constructor(private blogService: BlogService) { }
 
@@ -18,8 +19,9 @@ export class BlogComponent implements OnInit {
       .then(posts => {
         this.posts = posts;
       })
+
+    this.user = JSON.parse(localStorage.getItem('user'))
+
   }
-
-
 
 }

@@ -4,24 +4,17 @@
       mi jardín en flor
     </h1>
   </div>
-
   <div class="posts">
     <div *ngFor="let post of posts" class="post">
       <img class="image" src="{{post.image.url}}" alt="Imagen del post">
       <small class="text-muted">{{post.image.author}}</small>
       <p class="date">{{post.created_at | date: 'longDate'}}</p>
       <h3 class="post-title">{{post.title}}</h3>
-      <p class="text">{{ (post.text.length>150) ? (post.text | slice:0:150)+ ' [...]':(post.text) }}</p>
+      <p class="text">{{ (post.text.length > 150) ? (post.text | slice:0:150)+ ' [...]':(post.text) }}</p>
       <hr>
       <a [routerLink]="['/blog', post._id]" class="footer"> &gt; Leer más</a>
     </div>
   </div>
-
-  <!-- <div class="buttons">
-    <button [routerLink]="['']" type="button" class="btn btn-secondary btn-sm">Volver al Home</button>
-    <button [routerLink]="['services']" id="services-redirection" type="button" class="btn btn-secondary btn-sm">Ir a Servicios</button>
-  </div> -->
-
 </div>
 
 

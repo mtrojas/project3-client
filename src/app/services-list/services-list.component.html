@@ -7,5 +7,31 @@
     <p>{{service.name}}</p>
     <button type="button" class="btn btn-secondary btn-lg" [routerLink]="['/service', service._id]">Ver más</button>
   </div>
+  <div *ngIf="user.role === 'ADMIN'" class="add">
+    <div>
+      <input type="text" name="name" placeholder="nombre" [(ngModel)]="service.name">
+    </div>
+    <div>
+      <input type="text" name="description" placeholder="descripción" [(ngModel)]="service.description">
+    </div>
+    <div>
+      <input type="text" name="images" placeholder="imagen" [(ngModel)]="service.images">
+    </div>
+    <button type="button" class="btn btn-secondary btn-sm" (click)="handleCreateService()">
+      Agregar Servicio
+    </button>
+  </div>
 </div>
 
+
+<!-- <div class="item">
+  <h3>Crea tu cuenta</h3>
+  <input type="email" name="email" placeholder="email" [(ngModel)]="email" required>
+</div>
+<div class="item">
+  <input #myPassword="ngModel" type="password" name="password" placeholder="contraseña" [(ngModel)]="password" required>
+</div>
+<div class="item">
+  <button type="button" class="btn btn-secondary btn-lg" (click)="handleSignup()">Crear cuenta y entrar</button>
+  <p>Volver a<span (click)="hasAccount=!hasAccount"> login</span></p>
+</div> -->
