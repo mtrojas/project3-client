@@ -9,10 +9,11 @@ import { map } from 'rxjs/operators';
 })
 export class ServicesApiService {
 
-  //url = '/services/'
-  url = 'http://localhost:3000/services/'
+  url = '/api/services/'
+  //url = 'http://localhost:3000/services/'
 
-  constructor(private http: Http) { }
+  constructor(
+    private http: Http) { }
 
   getAllServices() {
     return this.http.get(this.url).toPromise()

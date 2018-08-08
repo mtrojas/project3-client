@@ -9,8 +9,8 @@ import { map } from 'rxjs/operators';
 })
 export class BlogService {
 
-  //url = '/blog/'
-  url = 'http://localhost:3000/blog/'
+  url = '/api/blog/'
+  //url = 'http://localhost:3000/blog/'
 
   constructor(
     private http: Http
